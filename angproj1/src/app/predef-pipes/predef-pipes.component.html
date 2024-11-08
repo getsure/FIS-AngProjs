@@ -1,0 +1,19 @@
+<pre>
+    {{empName | titlecase}}
+    {{empName | lowercase}}
+    {{empName | uppercase}}
+
+    Customized  Title case Pipe: {{empName | mytitlecase}}
+
+    {{sysDate | date }}
+    {{sysDate | date : 'fullDate'}}
+    {{sysDate | date: 'dd/MM/yyyy hh:mm:ss'}}
+    {{sysDate | date: 'MM/dd/yy hh:mm:ss'}}
+
+    {{myPrice }}
+    {{myPrice | currency}}  
+    {{myPrice | currency:'AUD':false}}
+    {{myPrice | currency:'INR'}}
+
+    {{product | json}}
+</pre>

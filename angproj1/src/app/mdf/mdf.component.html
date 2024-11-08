@@ -1,0 +1,9 @@
+<div class="container">
+    <form [formGroup] = "userForm" (ngSubmit)="submitFormData()">
+        <div class="form-group">
+            <label>UserName</label>
+            <input type="text" class="form-control" formControlName="userName"/>            
+        </div>
+        <button type="submit" class="btn btn-success mt-3">Register</button>
+    </form>
+</div>

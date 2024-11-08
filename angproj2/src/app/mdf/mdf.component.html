@@ -1,0 +1,25 @@
+<div class="container">
+    <form [formGroup] = "userForm" (ngSubmit)="submitFormData()">
+        <div class="form-group">
+            <label>UserName</label>
+            <input type="text" class="form-control" formControlName="userName"/>  
+            
+        <div *ngIf="userForm.controls['userName'].invalid && userForm.controls['userName'].touched" 
+              class="text-danger">
+             <p *ngIf="userForm.controls['userName'].errors?.['required']">UserName is required</p>
+             <p *ngIf="userForm.controls['userName'].errors?.['pattern']">
+                UserName should be valid & It should b/w 5 to 15 chars
+            </p>
+        </div>
+        </div>       
+        <!-- <div formGroupName="address">
+            <div class="form-group">
+                <label>City</label>
+                <input type="text" class="form-control" formControlName="city"/> 
+            </div>
+        </div> -->
+        <button [disabled]="!userForm.valid" type="submit" class="btn btn-success mt-3">Register</button>
+    </form>
+
+    {{employees | json}}
+</div>
